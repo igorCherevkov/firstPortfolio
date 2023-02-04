@@ -1,1 +1,1 @@
-First portfolio on React.js 
+First portfolio on React.js with adaptive interface
