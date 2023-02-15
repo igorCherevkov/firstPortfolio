@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="footer__text">@frenchgoy</div>
         </div>
       </div>
-      <h2 className="footer__reclam">Like me on<br></br>VK, Instagram, Behance, Dribble</h2>
+      <h2 className="footer__reclam">Like me on<br></br>VK, Instagram, Email, Mail</h2>
     </div>
   )
 }
