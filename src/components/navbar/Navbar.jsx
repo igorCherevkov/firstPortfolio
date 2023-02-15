@@ -6,9 +6,9 @@ import './navbar.css';
 const Menu = () => (
   <>
     <p><a href="#about" id='aboutMe'>About me</a></p>
-    <p><a href="#skills">Skills</a></p>
-    <p><a href="#portfolio">Portfolio</a></p>
-    <p><a href="#contacts">Contacts</a></p>
+    <p><a href="#skills" id='skills'>Skills</a></p>
+    <p><a href="#portfolio" id='portfolio'>Portfolio</a></p>
+    <p><a href="#contacts" id='contacts'>Contacts</a></p>
   </>
 )
 
@@ -25,16 +25,33 @@ const Navbar = () => {
           <Menu />
         </div>
         <div className="navbar__menu">
-        { toggleMenu
+        { /*toggleMenu
           ? <BiArrowFromTop size={27} onClick={()=>setToggleMenu(false)}/>
-          : <BiArrowFromBottom size={27} onClick={()=>setToggleMenu(true)}/>
+          : <BiArrowFromBottom size={27} onClick={()=>setToggleMenu(true)}/>*/
         }
-        { toggleMenu && (
+        { /*toggleMenu && (
           <div className="navbar__menu-container scale-up-center">
             <div className="navbar__menu-container-links"><Menu /></div>
           </div>
-        )
+        )*/
         }
+
+        { toggleMenu 
+        ? <BiArrowFromBottom size={27} onClick={()=>setToggleMenu(false)}/>
+        : <BiArrowFromTop size={27} onClick={()=>setToggleMenu(true)}/>
+        }
+        { toggleMenu && (
+          <div className="menu">
+            <div className="menu__left">
+              <Menu />
+            </div>
+            <div className="menu__right">
+              <BiArrowFromBottom size={27} onClick={()=>setToggleMenu(false)}/>
+              <h1 className="menu__language">RU / ENG</h1>
+            </div>
+          </div>
+        )}
+
       </div>
       </div>
     </div>
